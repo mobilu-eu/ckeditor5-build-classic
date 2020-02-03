@@ -28,6 +28,9 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter';
+import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
+import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -54,7 +57,10 @@ ClassicEditor.builtinPlugins = [
 	Paragraph,
 	PasteFromOffice,
 	Table,
-	TableToolbar
+	TableToolbar,
+	SimpleUploadAdapter,
+	FontColor,
+	FontBackgroundColor
 ];
 
 // Editor configuration.
@@ -65,6 +71,8 @@ ClassicEditor.defaultConfig = {
 			'|',
 			'bold',
 			'italic',
+			'fontColor',
+			'fontBackgroundColor',
 			'link',
 			'bulletedList',
 			'numberedList',
