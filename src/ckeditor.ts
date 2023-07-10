@@ -30,6 +30,7 @@ import { Comments} from "@ckeditor/ckeditor5-comments";
 import { Alignment } from "@ckeditor/ckeditor5-alignment";
 import { SimpleUploadAdapter } from '@ckeditor/ckeditor5-upload';
 import { PageBreak } from '@ckeditor/ckeditor5-page-break';
+import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
 
 export default class ClassicEditor extends ClassicEditorBase {
 	public static override builtinPlugins = [
@@ -67,6 +68,7 @@ export default class ClassicEditor extends ClassicEditorBase {
 		Table,
 		TableToolbar,
 		TextTransformation,
+		GeneralHtmlSupport,
 		TrackChanges,
 		Comments,
 		ExportWord,
