@@ -13,7 +13,15 @@ import { FontBackgroundColor, FontColor, FontFamily, FontSize } from '@ckeditor/
 import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
 import { EasyImage } from '@ckeditor/ckeditor5-easy-image';
 import { Heading } from '@ckeditor/ckeditor5-heading';
-import { Image, ImageCaption, ImageStyle, ImageToolbar, ImageUpload, PictureEditing } from '@ckeditor/ckeditor5-image';
+import {
+	Image,
+	ImageCaption,
+	ImageResize,
+	ImageStyle,
+	ImageToolbar,
+	ImageUpload,
+	PictureEditing
+} from '@ckeditor/ckeditor5-image';
 import { Indent } from '@ckeditor/ckeditor5-indent';
 import { Link } from '@ckeditor/ckeditor5-link';
 import { List, DocumentList } from '@ckeditor/ckeditor5-list';
@@ -28,13 +36,14 @@ import { ExportWord } from '@ckeditor/ckeditor5-export-word';
 import { TrackChanges } from "@ckeditor/ckeditor5-track-changes";
 import { Comments} from "@ckeditor/ckeditor5-comments";
 import { Alignment } from "@ckeditor/ckeditor5-alignment";
-import { SimpleUploadAdapter } from '@ckeditor/ckeditor5-upload';
+import { SimpleUploadAdapter, Base64UploadAdapter } from '@ckeditor/ckeditor5-upload';
 import { PageBreak } from '@ckeditor/ckeditor5-page-break';
 import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
 
 export default class ClassicEditor extends ClassicEditorBase {
 	public static override builtinPlugins = [
 		Essentials,
+		Base64UploadAdapter,
 		SimpleUploadAdapter,
 		Autoformat,
 		PageBreak,
@@ -58,6 +67,7 @@ export default class ClassicEditor extends ClassicEditorBase {
 		ImageStyle,
 		ImageToolbar,
 		ImageUpload,
+		ImageResize,
 		Indent,
 		Link,
 		DocumentList,
